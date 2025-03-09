@@ -2,23 +2,19 @@
 
 title Fungus growing mycelium with spore
 
-participant "fp : FungusPlayer" as Fp
 participant "f : Fungus" as F
 participant "t : Tile" as T
 participant "m : Mycelium" as M
 
-activate Fp
 activate F
 activate T
 
+
+F-[#red]>T : growMycelium
 opt have enough points
-Fp -> F : growMycelium
-F-[#red]>T : HasSpore
-T -[#red]-> F
+T -[#red]> F : hasSpore
 F -> M ** : construct
 F -> T : addEntity
-F --> Fp
-Fp -> Fp : updateScore
 
 end
 
