@@ -9,5 +9,6 @@ activate I
 activate Sp
 
 Sp -> I : setSpeed()
+I --> Sp
 
 @enduml
