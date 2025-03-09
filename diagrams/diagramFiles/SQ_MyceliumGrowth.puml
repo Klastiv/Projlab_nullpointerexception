@@ -19,6 +19,4 @@ activate M
 M --> F
 F -> T : addEntity()
 
-
-
 @enduml
