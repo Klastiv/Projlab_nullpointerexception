@@ -6,7 +6,6 @@ participant "f1 : Fungus" as F1
 participant "f2 : Fungus" as F2
 participant "tek: Tekton" as Tek
 participant "m1 : Mycelium" as M1
-participant "m2 : Mycelium" as M2
 participant "t : Tile" as T
 
 activate F1
