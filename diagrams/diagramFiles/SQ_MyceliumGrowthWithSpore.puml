@@ -1,6 +1,6 @@
 @startuml Fungus growth with spore
 
-title Fungus growing mycelium
+title Mycelium growing mycelium with spore
 
 participant "f : Fungus" as F
 participant "tek: Tekton" as Tek
@@ -9,13 +9,15 @@ participant "t : Tile" as T
 
 activate F
 activate T
+activate Tek
 
 
-F-[#red]>Tek : growMycelium()l
-opt Have enough points
+F->Tek : growMycelium()
+Tek -> F : hasSpore()
 F -> M ** : <<construct>>
+activate M
+M --> F
 F -> T : addEntity()
-end
 
 
 
