@@ -12,7 +12,7 @@ activate Tl
 
 M -> T : update()
 opt isDying
-    T -> Tl : removeEntity(M)
+    T -> Tl : removeEntity(m)
     Tl --> T
     T --> M
 
