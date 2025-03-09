@@ -1,6 +1,6 @@
 @startuml Mycelium growth
 
-title Only one mycelium growing on Tekton
+title Multiple mycelium growing on Tekton
 
 participant "f1 : Fungus" as F1
 participant "f2 : Fungus" as F2
@@ -26,7 +26,12 @@ T-->F1
 F1-->F2
 
 F2->Tek : growMycelium()
-Tek --> F2 : false
+Tek --> F2 : true
+F2 -> M2 ** : <<construct>>
+activate M2
+M2 --> F2
+F2 -> T : addEntity()
+T-->F2
 
 
 @enduml
