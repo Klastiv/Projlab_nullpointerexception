@@ -1,17 +1,22 @@
-@startuml Fungus growth
+@startuml Fungus growth with spore
 
 title Fungus growing mycelium
 
 participant "f : Fungus" as F
-participant "t : Tile" as T
+participant "tek: Tekton" as Tek
 participant "m : Mycelium" as M
+participant "t : Tile" as T
 
 activate F
 activate T
 
-F-[#red]>T : growMycelium
-F -> M ** : construct
-F -> T : addEntity
+
+F-[#red]>Tek : growMycelium()l
+opt Have enough points
+F -> M ** : <<construct>>
+F -> T : addEntity()
+end
+
 
 
 @enduml

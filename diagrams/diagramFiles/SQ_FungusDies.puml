@@ -1,20 +1,15 @@
 @startuml Insect thread cutting
 
-title Insect cutting a thread
+title Detached mycelium dies
 
-participant "i : Insect" as I
 participant "m : Mycelium" as T
+participant "map : Map" as M
 
-activate I
 activate T
 
-
-opt not under the influence of CutSpore
-I -> T : detach
-T-[#red]>T : tick
+M-[#red]>T : tick
 
 
-end
 destroy T
 
 

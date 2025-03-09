@@ -3,17 +3,18 @@
 title Fungus growing mycelium with spore
 
 participant "f : Fungus" as F
-participant "t : Tile" as T
+participant "tek: Tekton" as Tek
 participant "m : Mycelium" as M
+participant "t : Tile" as T
 
 activate F
 activate T
 
 
-F-[#red]>T : growMycelium
-T -[#red]> F : hasSpore
-F -> M ** : construct
-F -> T : addEntity
+F-[#red]>Tek : growMycelium()
+Tek -[#red]> F : hasSpore()
+F -> M ** : <<construct>>
+F -> T : addEntity()
 
 
 
