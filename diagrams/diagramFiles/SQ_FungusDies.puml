@@ -1,0 +1,21 @@
+@startuml Insect thread cutting
+
+title Insect cutting a thread
+
+participant "i : Insect" as I
+participant "m : Mycelium" as T
+
+activate I
+activate T
+
+
+opt not under the influence of CutSpore
+I -> T : detach
+T-[#red]>T : tick
+
+
+end
+destroy T
+
+
+@enduml

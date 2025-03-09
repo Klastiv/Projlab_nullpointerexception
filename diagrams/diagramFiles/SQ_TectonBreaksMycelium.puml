@@ -1,0 +1,15 @@
+@startuml TektonBreakMycelium
+title Tekton breaking mycelium
+
+participant "t : Tekton" as T
+participant "m : Mycelium" as M
+
+activate T
+
+T-[#RED]>T : break
+T-[#red]>M : detach
+
+destroy T
+
+
+@enduml

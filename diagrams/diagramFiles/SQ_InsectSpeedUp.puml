@@ -1,0 +1,16 @@
+@startuml InsectSpeedUp
+
+title Insect speeding up spore effect
+
+participant "I: Insect" as I
+participant "S: Spore" as Sp
+
+activate I
+activate Sp
+
+I -> Sp: Geteaten()
+Sp --> I
+
+destroy Sp
+
+@enduml

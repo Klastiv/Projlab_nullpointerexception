@@ -1,0 +1,22 @@
+@startuml TektonBreak
+title Tekton breaking
+
+participant "t : Tekton" as T
+participant "t1 : Tekton" as T1
+participant "t2 : Tekton" as T2
+
+activate T
+
+T-[#RED]>T : break
+T-[#red]>T1 : construct
+activate T1
+T1-[#red]->T
+
+T-[#red]>T2 : construct
+activate T2
+T2-[#red]->T
+
+destroy T
+
+
+@enduml
