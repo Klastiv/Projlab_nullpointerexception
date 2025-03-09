@@ -2,22 +2,39 @@
 
 title Insect cutting a thread
 
-actor "Player controlling the insect" as P
-actor "InsectPlayer" as Ip
-actor "Insect" as I
-actor "Mycelium" as T
 
-activate P
-activate Ip
+participant "I : Insect" as I
+participant "M : Mycelium" as T
+participant "T : Tile" as Tl
+participant "Connected : Mycelium" as Mc
+participant "Disconnected : Mycelium" as Md
+
+
 activate I
 activate T
+activate Tl
 
-P --> Ip : cut
+opt Insect not under the influence of CutSpore
+I -> T : detach()
+T->Mc : <<construct>>
 
-Ip -> I : cut
-opt not under the influence of CutSpore
-I -> T : detach
+activate Mc
 
+Mc-->T
+T->Tl : addEntity(Connected)
+Tl --> T
+T->Md : <<construct>>
+
+activate Md
+
+Md-->T
+T->Tl : addEntity(Disconnected)
+Tl-->T
+
+T->Tl : removeEntity(M)
+Tl-->T
+
+destroy T
 
 end
 
