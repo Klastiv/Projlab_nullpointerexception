@@ -1,0 +1,13 @@
+@startuml InsectSpeedUp
+
+title Cut spore affecting insect
+
+participant "I: Insect" as I
+participant "S: CutSpore" as Sp
+
+activate I
+activate Sp
+
+Sp -> I : setCut()
+
+@enduml
