@@ -1,0 +1,24 @@
+@startuml Mycelium dies
+
+title Detached mycelium dies
+
+participant "m : Mycelium" as T
+participant "map : Map" as M
+participant "t : Tile" as Tl
+
+activate T
+activate M
+activate Tl
+
+M -> T : update()
+opt isDying
+    T -> Tl : removeEntity(M)
+    Tl --> T
+    T --> M
+
+destroy T
+
+end
+
+
+@enduml
