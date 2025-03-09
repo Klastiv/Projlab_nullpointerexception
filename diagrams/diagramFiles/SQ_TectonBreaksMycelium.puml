@@ -1,0 +1,46 @@
+@startuml TektonBreakMycelium
+title Tekton breaking mycelium
+
+participant "map : Map" as M
+participant "t : Tekton" as T
+participant "m : Mycelium" as My
+participant "tl : Tile" as Tl
+participant "Connected : Mycelium" as Mc
+participant "Disonnected : Mycelium" as Md
+
+
+activate T
+activate My
+activate M
+activate Tl
+
+M->T : update()
+opt breakChance chance of this happening
+T->T : break()
+T->My : detach()
+
+My->Mc : <<construct>>
+
+activate Mc
+
+Mc-->My
+My->Tl : addEntity(Connected)
+Tl --> My
+My->Md : <<construct>>
+
+activate Md
+
+Md-->My
+My->Tl : addEntity(Disconnected)
+Tl-->My
+
+My->Tl : removeEntity(m)
+Tl-->My
+
+destroy My
+
+
+end
+
+
+@enduml
