@@ -9,13 +9,9 @@ participant "m : Mycelium" as M
 activate F
 activate T
 
-
 F-[#red]>T : growMycelium
-opt have enough points
 F -> M ** : construct
 F -> T : addEntity
-
-end
 
 
 @enduml

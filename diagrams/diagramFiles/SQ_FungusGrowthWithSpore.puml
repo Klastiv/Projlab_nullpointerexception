@@ -11,12 +11,10 @@ activate T
 
 
 F-[#red]>T : growMycelium
-opt have enough points
 T -[#red]> F : hasSpore
 F -> M ** : construct
 F -> T : addEntity
 
-end
 
 
 @enduml
