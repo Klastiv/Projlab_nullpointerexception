@@ -14,6 +14,8 @@ activate Tek
 
 F->Tek : growMycelium()
 Tek -> F : hasSpore()
+F --> Tek 
+Tek --> F : true
 F -> M ** : <<construct>>
 activate M
 M --> F
