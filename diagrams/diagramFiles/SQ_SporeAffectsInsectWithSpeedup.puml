@@ -8,7 +8,7 @@ participant "S: SpeedupSpore" as Sp
 activate I
 activate Sp
 
-Sp -> I : setSpeed()
+Sp -> I : setSpeedupEffect()
 I --> Sp
 
 @enduml

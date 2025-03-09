@@ -8,7 +8,7 @@ participant "S: FreezeSpore" as Sp
 activate I
 activate Sp
 
-Sp -> I : setSpeed()
+Sp -> I : setFreezeEffect()
 I --> Sp
 
 @enduml
