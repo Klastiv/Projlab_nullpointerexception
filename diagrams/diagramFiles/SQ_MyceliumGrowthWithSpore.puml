@@ -1,6 +1,6 @@
 @startuml Fungus growth with spore
 
-title Mycelium growing mycelium with spore
+title Mycelium growing quicker with spore
 
 participant "f : Fungus" as F
 participant "tek: Tekton" as Tek
