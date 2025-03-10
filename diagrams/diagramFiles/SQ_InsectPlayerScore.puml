@@ -2,7 +2,7 @@
 
 title Insect player getting its score updated after an event
 
-participant "P : InsectPlayer" as P
+participant "p : InsectPlayer" as P
 
 activate P
 

@@ -2,8 +2,8 @@
 
 title Slowing spore affecting insect
 
-participant "I: Insect" as I
-participant "S: SlowSpore" as Sp
+participant "i: Insect" as I
+participant "s: SlowSpore" as Sp
 
 activate I
 activate Sp

@@ -3,11 +3,11 @@
 title Insect cutting a thread
 
 
-participant "I : Insect" as I
-participant "M : Mycelium" as T
-participant "T : Tile" as Tl
-participant "Connected : Mycelium" as Mc
-participant "Disconnected : Mycelium" as Md
+participant "i : Insect" as I
+participant "m : Mycelium" as T
+participant "t : Tile" as Tl
+participant "connected : Mycelium" as Mc
+participant "disconnected : Mycelium" as Md
 
 
 activate I
@@ -21,17 +21,17 @@ T->Mc : <<construct>>
 activate Mc
 
 Mc-->T
-T->Tl : addEntity(Connected)
+T->Tl : addEntity(connected)
 Tl --> T
 T->Md : <<construct>>
 
 activate Md
 
 Md-->T
-T->Tl : addEntity(Disconnected)
+T->Tl : addEntity(disconnected)
 Tl-->T
 
-T->Tl : removeEntity(M)
+T->Tl : removeEntity(m)
 Tl-->T
 
 destroy T

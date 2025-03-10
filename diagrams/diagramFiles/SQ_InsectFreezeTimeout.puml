@@ -2,8 +2,8 @@
 
 title Insect freeze times out
 
-participant "M : Map" as M
-participant "I : Insect" as I
+participant "m : Map" as M
+participant "i : Insect" as I
 
 activate M
 activate I

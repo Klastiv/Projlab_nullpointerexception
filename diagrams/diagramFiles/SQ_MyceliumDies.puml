@@ -2,8 +2,8 @@
 
 title Detached mycelium dies
 
-participant "m : Mycelium" as T
 participant "map : Map" as M
+participant "m : Mycelium" as T
 participant "t : Tile" as Tl
 
 activate T

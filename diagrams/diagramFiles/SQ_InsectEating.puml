@@ -2,15 +2,15 @@
 
 title Insect player eating a spore
 
-participant "I : Insect" as I
-participant "Sp : Spore" as Sp
-participant "T : Tile" as T
+participant "i : Insect" as I
+participant "sp : Spore" as Sp
+participant "t : Tile" as T
 
 activate I
 activate T
 activate Sp
 
-I -> Sp : getEaten(I)
+I -> Sp : getEaten(i)
 alt Sp is a CutSpore 
 ref over I, Sp : Cut spore affecting insect
 else Sp is a FreezeSpore
@@ -20,7 +20,7 @@ ref over I, Sp : Slowing spore affecting insect
 else Sp is a SpeedupSpore
 ref over I, Sp : Speedup spore affecting insect
 end
-Sp -> T : removeEntity(Sp)
+Sp -> T : removeEntity(sp)
 T --> Sp
 Sp --> I
 

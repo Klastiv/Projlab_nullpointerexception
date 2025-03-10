@@ -2,20 +2,20 @@
 
 title Insect player moving to a tile
 
-participant "I : Insect" as I
-participant "CurrentTile : Tile" as Tx
-participant "TargetTile : Tile" as Ty
+participant "i : Insect" as I
+participant "currentTile : Tile" as Tx
+participant "targetTile : Tile" as Ty
 
 activate I
 activate Tx
 activate Ty
 
 'tell don't ask... 
-I -> I : canMoveTo(TargetTile)
+I -> I : canMoveTo(targetTile)
 opt  have enough move points & path exists to desired tile (i.e. the result of canMoveTo())
-I -> Tx : removeEntity(I)
+I -> Tx : removeEntity(i)
 Tx --> I
-I -> Ty : addEntity(I)
+I -> Ty : addEntity(i)
 Ty --> I
 end
 

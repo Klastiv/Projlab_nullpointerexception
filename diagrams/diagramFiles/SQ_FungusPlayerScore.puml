@@ -2,7 +2,7 @@
 
 title Fungus player getting its score updated after an event
 
-participant "P : FungusPlayer" as P
+participant "p : FungusPlayer" as P
 
 activate P
 

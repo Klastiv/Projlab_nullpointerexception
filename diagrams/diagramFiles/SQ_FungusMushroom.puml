@@ -2,9 +2,9 @@
 
 title Fungus growing a mushroom
 
-participant "F : Fungus" as F
-participant "T : Tile" as T
-participant "Fb : FungusBody" as Fb
+participant "f : Fungus" as F
+participant "t : Tile" as T
+participant "fb : FungusBody" as Fb
 
 activate F
 activate T
@@ -13,7 +13,7 @@ opt have enough points
 F -> Fb ** : <<construct>>
 activate Fb
 Fb --> F
-F -> T : addEntity(Fb)
+F -> T : addEntity(fb)
 
 
 end

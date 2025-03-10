@@ -2,8 +2,8 @@
 
 title Cut spore affecting insect
 
-participant "I: Insect" as I
-participant "S: CutSpore" as Sp
+participant "i: Insect" as I
+participant "s: CutSpore" as Sp
 
 activate I
 activate Sp

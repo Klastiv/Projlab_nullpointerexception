@@ -2,8 +2,8 @@
 
 title Freezing spore affecting insect
 
-participant "I: Insect" as I
-participant "S: FreezeSpore" as Sp
+participant "i: Insect" as I
+participant "s: FreezeSpore" as Sp
 
 activate I
 activate Sp

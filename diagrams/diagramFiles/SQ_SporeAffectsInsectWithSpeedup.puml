@@ -2,8 +2,8 @@
 
 title Speedup spore affecting insect
 
-participant "I: Insect" as I
-participant "S: SpeedupSpore" as Sp
+participant "i: Insect" as I
+participant "s: SpeedupSpore" as Sp
 
 activate I
 activate Sp

@@ -5,8 +5,8 @@ participant "map : Map" as M
 participant "t : Tekton" as T
 participant "m : Mycelium" as My
 participant "tl : Tile" as Tl
-participant "Connected : Mycelium" as Mc
-participant "Disonnected : Mycelium" as Md
+participant "connected : Mycelium" as Mc
+participant "disonnected : Mycelium" as Md
 
 
 activate T
@@ -24,21 +24,23 @@ My->Mc : <<construct>>
 activate Mc
 
 Mc-->My
-My->Tl : addEntity(Connected)
+My->Tl : addEntity(connected)
 Tl --> My
 My->Md : <<construct>>
 
 activate Md
 
 Md-->My
-My->Tl : addEntity(Disconnected)
+My->Tl : addEntity(disconnected)
 Tl-->My
 
 My->Tl : removeEntity(m)
 Tl-->My
 
-destroy My
+My-->T
 
+destroy My
+T-->M
 
 end
 
